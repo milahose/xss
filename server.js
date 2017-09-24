@@ -38,6 +38,7 @@ var insert_records = function(req, res) {
 
 app.post('/', (req, res) => {
   insert_records(req,res);
+  res.send('Thanks for signing up!');
 });
 
 app.listen(3000, () => {

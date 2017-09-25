@@ -107,3 +107,39 @@ dl.thirds {
 dl.thirds.middle {
   margin: 0 20px;
 }
+
+/* Home */
+
+.home fieldset {
+  margin-bottom: 30px;
+  width: 800px;
+}
+
+.home > h1, 
+.home > h2, 
+.home > fieldset {
+  margin-left: -132px;
+}
+
+.home input[type='text'],
+.home input[type='password']  {
+  width: 261px;
+}
+
+.home h3 {
+  font-weight: lighter;
+}
+
+.home input[name='create_account'] {
+  margin-top: 40px;
+}
+
+#message {
+  height: 100px;
+  margin-bottom: 0;
+}
+
+input[name="post_message"] {
+  margin-top: 0;
+  width: 600px;
+}

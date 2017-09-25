@@ -3,7 +3,6 @@ const app = express();
 const pg = require('pg');
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
-const http = require("http");
 
 app.use(express.static('client'));
 app.use(bodyParser.urlencoded({ extended: true })); 
@@ -36,9 +35,8 @@ var insert_records = function(req, res) {
   client.query("INSERT INTO users(firstname, lastname, email, facebook, twitter, linkedin, profileName, password, pwConfirm, bio) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)", [data.fname, data.lname, data.email, data.facebook, data.twitter, data.linkedin, data.profileName, data.password, data.pwConfirmed, data.bio]);
 }
 
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
   insert_records(req,res);
-  res.send('Thanks for signing up!');
 });
 
 app.listen(3000, () => {

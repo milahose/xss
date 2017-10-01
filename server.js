@@ -27,6 +27,7 @@ var insert_records = function(req, res) {
 
   // Connect to DB
   const connectionString = process.env.ELEPHANTSQL_URL || "postgres://aydbgobp:cUZEYaKqQrQfjot3MP0XzInd3bCJ1SLV@elmer.db.elephantsql.com:5432/aydbgobp";
+  
   const client = new pg.Client(connectionString);
   client.connect(); 
 
